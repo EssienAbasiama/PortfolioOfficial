@@ -35,12 +35,9 @@ const Hero = () => {
             applications and mobile applications
           </p> */}
           <p class="text-base lg:text-lg pt-3 pb-4">
-            Welcome to my digital world!<br></br> 
-            I specialize in crafting <br></br>
-            captivating web applications<br></br> 
-            and seamless user interfaces. <br></br>
-            With creativity and precision,<br></br> 
-            I bring ideas to life and empower businesses to thrive in
+            Welcome to my digital world! I specialize in crafting captivating
+            web applications and seamless user interfaces. With creativity and
+            precision, I bring ideas to life and empower businesses to thrive in
             the ever-evolving digital landscape.
           </p>
         </div>
