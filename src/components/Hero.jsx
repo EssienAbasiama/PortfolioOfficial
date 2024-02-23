@@ -35,10 +35,11 @@ const Hero = () => {
             applications and mobile applications
           </p> */}
           <p class="text-base lg:text-lg pt-3 pb-4">
-            Welcome to my digital world! I specialize in crafting captivating
-            web applications and seamless user interfaces. With creativity and
-            precision, I bring ideas to life and empower businesses to thrive in
-            the ever-evolving digital landscape.
+            Welcome to my digital world! I specialize in crafting<br>
+            </br> 
+            captivating web applications and seamless user interfaces.<br></br> 
+            With creativity and precision, I bring ideas to life and empower<br></br> 
+            businesses to thrive in the ever-evolving digital landscape.
           </p>
           <div class="flex items-center gap-2 ">
             <div
