@@ -49,7 +49,7 @@ const Hero = () => {
               <a
                 href="/assets/Essien-Abasiama-FrontEnd-Resume.pdf"
                 download="Resume"
-                class=" "
+                class=""
               >
                 Hello 
               </a>
