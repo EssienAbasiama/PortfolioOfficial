@@ -40,6 +40,30 @@ const Hero = () => {
             precision, I bring ideas to life and empower businesses to thrive in
             the ever-evolving digital landscape.
           </p>
+          <div class="flex items-center gap-2 ">
+            <div
+              class="cursor-pointer flex items-center gap-2 border-[4px] w-[99px]
+                  h-[40px] rounded-md uppercase font-semibold justify-center  lg:text-base lg:w-[130px] lg:h-[50px] bg-[#222] text-[13px] border-b-[#915EFF] border-t-0 border-r-0 border-l-0 lg:mt-3"
+            >
+              <a
+                href="/assets/myResume-185f8ed5.pdf"
+                download="Resume"
+                class=" "
+              >
+                Resume
+              </a>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                width="15"
+                height="15"
+                fill="currentColor"
+              >
+                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"></path>
+                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"></path>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <div style={{ marginTop: "50px" }}></div>;
