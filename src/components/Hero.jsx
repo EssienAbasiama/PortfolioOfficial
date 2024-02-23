@@ -24,7 +24,7 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <div style="margin-top: 50px;"></div>
+      <div style={{ marginTop: '50px' }}></div>;
       <ComputersCanvas />
 
       <div className='absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center'>
