@@ -30,14 +30,17 @@ const Hero = () => {
               </div>
             </h1>
           </div>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          {/* <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             I develop stuning visuals, web <br className="sm:block hidden" />
             applications and mobile applications
-          </p>
+          </p> */}
           <p class="text-base lg:text-lg pt-3 pb-4">
-            Welcome to my digital world! I specialize in crafting captivating
-            web applications and seamless user interfaces. With creativity and
-            precision, I bring ideas to life and empower businesses to thrive in
+            Welcome to my digital world!<br></br> 
+            I specialize in crafting <br></br>
+            captivating web applications<br></br> 
+            and seamless user interfaces. <br></br>
+            With creativity and precision,<br></br> 
+            I bring ideas to life and empower businesses to thrive in
             the ever-evolving digital landscape.
           </p>
         </div>
