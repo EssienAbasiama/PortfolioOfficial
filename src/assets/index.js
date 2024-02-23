@@ -32,7 +32,7 @@ import tripguide from "./tripguide.png";
 import p2pfi from "./company/p2pfi.jpeg";
 import nestlypay from "./company/Nestlypay.jpeg";
 import groomlog from "./company/Groomlog.jpeg";
-import codelearnershub from "./company/p2pfi";
+import codelearnershub from "./company/p2pfi.jpeg";
 export {
   logo,
   backend,
