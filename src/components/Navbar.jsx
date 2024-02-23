@@ -44,7 +44,7 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' style={{borderRadius:"30px"}}/>
           <div>
-          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+          <p style={{marginRight:"10px"}} className='text-white text-[18px] font-bold cursor-pointer flex '>
             KingX &nbsp;
             <span className='sm:block hidden'> | Essien Abasiama</span>
           </p>
