@@ -23,6 +23,10 @@ import {
   jobit,
   tripguide,
   threejs,
+  codelearnershub,
+  groomlog,
+  p2pfi,
+  nestlypay,
 } from "../assets";
 
 export const navLinks = [
@@ -117,9 +121,9 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "FrontEnd Engineer Lead",
+    company_name: "Groomlog",
+    icon: groomlog,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
@@ -130,9 +134,9 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Frontend Developer",
+    company_name: "P2PFI",
+    icon: p2pfi,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
@@ -144,8 +148,8 @@ const experiences = [
   },
   {
     title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
+    company_name: "Nestlypay",
+    icon: nestlypay,
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
@@ -156,9 +160,9 @@ const experiences = [
     ],
   },
   {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
+    title: "Fullstack Developer Intern",
+    company_name: "CodeLearnersHub",
+    icon: codelearnershub,
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [

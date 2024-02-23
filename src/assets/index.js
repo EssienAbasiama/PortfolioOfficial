@@ -29,7 +29,10 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-
+import p2pfi from "./company/p2pfi.jpeg";
+import nestlypay from "./company/nestlypay.jpeg";
+import groomlog from "./company/groomlog.jpeg";
+import codelearnershub from "./company/p2pfi";
 export {
   logo,
   backend,
@@ -59,4 +62,8 @@ export {
   carrent,
   jobit,
   tripguide,
+  nestlypay,
+  p2pfi,
+  groomlog,
+  codelearnershub
 };
