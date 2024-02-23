@@ -43,10 +43,14 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' style={{borderRadius:"30px"}}/>
+          <div>
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
             KingX &nbsp;
             <span className='sm:block hidden'> | Essien Abasiama</span>
           </p>
+          <p>Available for hire</p>
+          </div>
+          
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
