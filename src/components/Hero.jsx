@@ -47,7 +47,7 @@ const Hero = () => {
                   h-[40px] rounded-md uppercase font-semibold justify-center  lg:text-base lg:w-[130px] lg:h-[50px] bg-[#222] text-[13px] border-b-[#915EFF] border-t-0 border-r-0 border-l-0 lg:mt-3"
             >
               <a
-                href="/assets/myResume-185f8ed5.pdf"
+                href="/assets/Essien-Abasiama-FrontEnd-Resume.pdf"
                 download="Resume"
                 class=" "
               >
