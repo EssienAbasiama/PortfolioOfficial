@@ -50,10 +50,10 @@ const services = [
     title: "MobileApp Developer",
     icon: backend,
   },
-  // {
-  //   title: "Brand Identity Designer",
-  //   icon: creator,
-  // },
+  {
+    title: "Graphic Designer",
+    icon: creator,
+  },
   {
     title: "Brand Identity Designer",
     icon: creator,
