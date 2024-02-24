@@ -31,7 +31,7 @@ const Hero = () => {
                 <span className="Typewriter__wrapper">Backend Developer </span>
                 <span className="Typewriter__wrapper">Mobile Developer </span>
                 <span className="Typewriter__wrapper">Brand Identity Designer</span>
-                <span className="Typewriter__wrapper">Graphic Designer</span>
+                <span style={{ color: 'red' }} className="text-red-500">Graphic Designer</span>
                 {/* <span class="Typewriter__cursor">|</span> */}
               </div>
             </h1>
