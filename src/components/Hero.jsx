@@ -6,20 +6,20 @@ import { styles } from "../styles";
 
 const Hero = () => {
   useEffect(() => {
-    const titles = gsap.utils.toArray("p");
+    const titles = gsap.utils.toArray(".Typewriter__wrapper");
 const tl = gsap.timeline();
 titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
     opacity: 0,
-    y: 80,
-    rotateX: -90,
+    y: 40,
+    rotateX: -50,
     stagger: 0.02,
   }, "<")
     .to(splitTitle.chars, {
       opacity: 0,
-      y: -80,
-      rotateX: 90,
+      y: -40,
+      rotateX: 50,
       stagger: 0.02,
     }, "<1");
 });
@@ -56,13 +56,13 @@ console.log("titles", titles);
       </div>
             </h1>
           </div>
-          <div class="text-base lg:text-lg pt-3 pb-4">
+          <p class="text-base lg:text-lg pt-3 pb-4">
             Welcome to my digital world! I specialize in crafting<br>
             </br> 
             captivating web applications and seamless user interfaces.<br></br> 
             With creativity and precision, I bring ideas to life and empower<br></br> 
             businesses to thrive in the ever-evolving digital landscape.
-          </div>
+          </p>
           <div class="flex items-center gap-2 ">
             <div
               class="cursor-pointer flex items-center gap-2 border-[4px] w-[99px]
