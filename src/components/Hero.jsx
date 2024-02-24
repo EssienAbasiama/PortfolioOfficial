@@ -27,11 +27,11 @@ const Hero = () => {
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="flex flex-col Typewriter" data-testid="typewriter-wrapper">
 
-                <span className="Typewriter__wrapper">Frontend Developer </span>
-                <span className="Typewriter__wrapper">Backend Developer </span>
-                <span className="Typewriter__wrapper">Mobile Developer </span>
-                <span className="Typewriter__wrapper">Brand Identity Designer</span>
-                <span style={{ color: 'red' }} className="text-red-500">Graphic Designer</span>
+                <span className="Typewriter__wrapper leading-0 m-0">Frontend Developer </span>
+                <span className="Typewriter__wrapper leading-0 m-0">Backend Developer </span>
+                <span className="Typewriter__wrapper leading-0 m-0">Mobile Developer </span>
+                <span className="Typewriter__wrapper leading-0 m-0">Brand Identity Designer</span>
+                <span style={{ color: 'red' }} className="text-red-500 leading-0 m-0">Graphic Designer</span>
                 {/* <span class="Typewriter__cursor">|</span> */}
               </div>
             </h1>
