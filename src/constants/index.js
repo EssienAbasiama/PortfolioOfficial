@@ -27,7 +27,12 @@ import {
   groomlog,
   p2pfi,
   nestlypay,
-  geegpay
+  geegpay,
+  getlinked,
+  wibe,
+  clearlink,
+  grammce,
+  
 } from "../assets";
 
 export const navLinks = [
@@ -226,9 +231,9 @@ const projects = [
     live_site_link: "https://geegpay-challenge-eta.vercel.app/"
   },
   {
-    name: "Job IT",
+    name: "getLinked",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "GetLinked Hackathon Project: I contributed to a vision-driven endeavor, turning ideas into impactful solutions. Explore my role in solving real-world challenges and pushing tech boundaries at the GetLinked Hackathon—a showcase of innovation in my portfolio.",
     tags: [
       {
         name: "react",
@@ -239,12 +244,81 @@ const projects = [
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "animation",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: getlinked,
+    source_code_link: "https://github.com/EssienAbasiama/linked",
+
+    live_site_link: "https://get-linked2-0.vercel.app/"
+  },
+  {
+    name: "Wibe Studio",
+    description:
+      "California-based Fashion Studio: Crafting unique designs and exquisite jewelry. Fashion, our art, transcends boundaries with creativity and happiness. Our vision is to make fashion easy and delightful for all.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "animation.css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: wibe,
+    source_code_link: "https://github.com/EssienAbasiama/wibe-studio-house",
+    live_site_link: "https://wibe-studio-umber.vercel.app/"
+  },
+  {
+    name: "ClearLink",
+    description:
+      "ClearLink: Uniting the world, one crystal-clear video call at a time. Experience the future of communication with unparalleled simplicity. Start your free trial and discover AI assistant avatargroup. Rated 5.0 from 3,000+ reviews.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "bootstrap",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: clearlink,
+    source_code_link: "https://github.com/EssienAbasiama/clearLink",
+    live_site_link: "https://clear-link-swart.vercel.app/"
+  },
+  {
+    name: "Grammercetamol",
+    description:
+      "The Grammcetamol Clinic: Speak English more naturally with confidence and stunning diction. Discover the secrets to fat fluency, boost your word power, and enhance your pronunciation.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "redux",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: grammce,
+    source_code_link: "https://github.com/EssienAbasiama/grammercetamol-interface",
+
+    live_site_link: "https://grammercetamoll.netlify.app/"
   },
   {
     name: "Trip Guide",
@@ -266,69 +340,8 @@ const projects = [
     ],
     image: tripguide,
     source_code_link: "https://github.com/",
-  },
-  {
-    name: "Car Rent",
-    description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: carrent,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: jobit,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+
+    live_site_link: "https://geegpay-challenge-eta.vercel.app/"
   },
 ];
 

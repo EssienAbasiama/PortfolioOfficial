@@ -37,6 +37,7 @@ import geegpay from "./geegpay.png";
 import clearlink from "./geegpay.png";
 import getlinked from "./geegpay.png";
 import wibe from "./wibe.png";
+import grammce from "./grammercetamol.png"
 export {
   logo,
   geegpay,
@@ -73,5 +74,6 @@ export {
   nestlypay,
   p2pfi,
   groomlog,
-  codelearnershub
+  codelearnershub,
+  grammce
 };
