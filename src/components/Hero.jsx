@@ -12,14 +12,14 @@ titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
     opacity: 0,
-    y: 40,
-    rotateX: -50,
-    stagger: 0.05,
+    y: 10,
+    rotateX: -20,
+    stagger: 0.1,
   }, "<")
     .to(splitTitle.chars, {
       opacity: 0,
-      y: -40,
-      rotateX: 50,
+      y: -10,
+      rotateX: 20,
       stagger: 0.05,
     }, "<1");
 });
