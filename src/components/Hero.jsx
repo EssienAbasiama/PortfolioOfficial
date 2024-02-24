@@ -22,6 +22,7 @@ const Hero = () => {
         stagger: .02
         }, "<1");
     });
+    console.log("titles " + titles)
   
   return (
     <section className={`relative w-full h-screen mx-auto`}>
