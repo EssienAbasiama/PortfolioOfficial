@@ -5,24 +5,27 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 
 const Hero = () => {
-  const titles = gsap.utils.toArray("p");
-    const tl = gsap.timeline();
-    titles.forEach((title) => {
-      const splitTitle = new SplitTextJS(title);
-      tl.from(splitTitle.chars, {
-        opacity: 0,
-        y:80,
-        rotateX: -90,
-        stagger: .02
-      }, "<")
-        .to(splitTitle.chars, {
-          opacity: 0,
-          y:-80,
-        rotateX: 90,
-        stagger: .02
-        }, "<1");
-    });
-    console.log("titles " + titles)
+  useEffect(() => {
+    const titles = gsap.utils.toArray("p");
+const tl = gsap.timeline();
+titles.forEach((title) => {
+  const splitTitle = new SplitTextJS(title);
+  tl.from(splitTitle.chars, {
+    opacity: 0,
+    y: 80,
+    rotateX: -90,
+    stagger: 0.02,
+  }, "<")
+    .to(splitTitle.chars, {
+      opacity: 0,
+      y: -80,
+      rotateX: 90,
+      stagger: 0.02,
+    }, "<1");
+});
+
+console.log("titles", titles);
+  }, []);
   
   return (
     <section className={`relative w-full h-screen mx-auto`}>
