@@ -183,27 +183,27 @@ const experiences = [
 const testimonials = [
   {
     testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
+      "I thought it was impossible to make a website as beautiful as our product, but Essien proved me wrong.",
+    name: "Emmanuel",
+    designation: "CEO",
     company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    image: "https://www.bing.com/ck/a?!&&p=ef5039c871a767e9JmltdHM9MTcwODczMjgwMCZpZ3VpZD0wY2JmNGFiZi1jYTliLTYzZjctMTk0Zi01ZTkxY2I4OTYyMTkmaW5zaWQ9NTU1NA&ptn=3&ver=2&hsh=3&fclid=0cbf4abf-ca9b-63f7-194f-5e91cb896219&u=a1L2ltYWdlcy9zZWFyY2g_cT1waWN0dXJlIG9mIGEgYmxhY2sgbWFuJkZPUk09SVFGUkJBJmlkPTUwQkNGMzY4ODMzQkJBRjM1NUE4RDgzMzQ2QkMwMzlERUFDNTE3N0Y&ntb=1",
   },
   {
     testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+      "Working with Essien has been an absolute pleasure. His exceptional web development skills brought our project to life. His attention to detail, creativity, and ability to turn our ideas into a functional and visually stunning website exceeded our expectations. We highly recommend Essien for anyone seeking a top-notch web developer!",
+    name: "Gabriel",
+    designation: "Product Designer",
+    company: "Standee",
+    image: "https://www.bing.com/ck/a?!&&p=755405c42c330dacJmltdHM9MTcwODczMjgwMCZpZ3VpZD0wY2JmNGFiZi1jYTliLTYzZjctMTk0Zi01ZTkxY2I4OTYyMTkmaW5zaWQ9NTU0OA&ptn=3&ver=2&hsh=3&fclid=0cbf4abf-ca9b-63f7-194f-5e91cb896219&u=a1L2ltYWdlcy9zZWFyY2g_cT1waWN0dXJlIG9mIGEgYmxhY2sgbWFuJkZPUk09SVFGUkJBJmlkPUJGNUNCRTAxODdDNkE3NTk0MDZBM0FGQUJFQjY0Nzc0QUVFQ0NCQkI&ntb=1",
   },
   {
     testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
+      "After Essien optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    name: "Omolayo",
+    designation: "Marketing Lead",
     company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    image: "https://www.bing.com/ck/a?!&&p=71911c0a54c21f74JmltdHM9MTcwODczMjgwMCZpZ3VpZD0wY2JmNGFiZi1jYTliLTYzZjctMTk0Zi01ZTkxY2I4OTYyMTkmaW5zaWQ9NTQ1OQ&ptn=3&ver=2&hsh=3&fclid=0cbf4abf-ca9b-63f7-194f-5e91cb896219&u=a1L2ltYWdlcy9zZWFyY2g_cT1waWN0dXJlIG9mIGEgYmxhY2sgd29tYW4mRk9STT1JUUZSQkEmaWQ9OTMyRDUzRDlCQjJDMUY1Njc5N0IxNDMyMjZEODNCN0IzMTE0QzY2RA&ntb=1",
   },
 ];
 
