@@ -34,8 +34,8 @@ import nestlypay from "./company/Nestlypay.jpeg";
 import groomlog from "./company/Groomlog.jpeg";
 import codelearnershub from "./company/p2pfi.jpeg";
 import geegpay from "./geegpay.png";
-import clearlink from "./geegpay.png";
-import getlinked from "./geegpay.png";
+import clearlink from "./clearlink.png";
+import getlinked from "./getlinked.png";
 import wibe from "./wibe.png";
 import grammce from "./grammercetamol.png"
 export {
