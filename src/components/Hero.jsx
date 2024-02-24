@@ -1,10 +1,28 @@
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import SplitTextJS from "split-text-js";
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
-import "./style.css";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
+  const titles = gsap.utils.toArray(".Typewriter__wrapper");
+    const tl = gsap.timeline();
+    titles.forEach((title) => {
+      const splitTitle = new SplitTextJS(title);
+      tl.from(splitTitle.chars, {
+        opacity: 0,
+        y:80,
+        rotateX: -90,
+        stagger: .02
+      }, "<")
+        .to(splitTitle.chars, {
+          opacity: 0,
+          y:-80,
+        rotateX: 90,
+        stagger: .02
+        }, "<1");
+    });
+  
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
@@ -26,13 +44,12 @@ const Hero = () => {
             <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---        "}</h1>
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="Typewriter" data-testid="typewriter-wrapper">
-                <p  style={{ lineHeight: 0 }}className="Typewriter__wrapper m-0">Frontend Developer </p>
-                <p  style={{ lineHeight: 0 }}className="Typewriter__wrapper m-0">Backend Developer </p>
-                <p  style={{ lineHeight: 0 }}className="Typewriter__wrapper m-0">Mobile Developer </p>
-                <p  style={{ lineHeight: 0 }}className="Typewriter__wrapper m-0">Brand Identity Designer</p>
-                <p style={{ color: 'red', lineHeight: 0}} className="text-red-500 m-0">Graphic Designer</p>
-                {/* <span class="Typewriter__cursor">|</span> */}
-              </div>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Frontend Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Backend Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Mobile Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Brand Identity Designer</p>
+        <p style={{ color: 'red', lineHeight: 0 }} className="text-red-500 m-0">Graphic Designer</p>
+      </div>
             </h1>
           </div>
           <p class="text-base lg:text-lg pt-3 pb-4">
