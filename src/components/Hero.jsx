@@ -22,16 +22,16 @@ const Hero = () => {
             I'm <span className="text-[#915EFF]">Essien</span>
           </h1>
 
-          <div class="flex space-x-1 items-center mt-3">
-            <h1 class="text-white text-base font-bold lg:text-xl">a/an{"---  "}</h1>
-            <h1 class="font-bold text-xl lg:text-3xl text-[#915EFF] ">
+          <div className="flex space-x-1 items-center mt-3">
+            <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---  "}</h1>
+            <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="flex flex-col Typewriter" data-testid="typewriter-wrapper">
 
-                <span class="Typewriter__wrapper">Frontend Developer </span>
-                <span class="Typewriter__wrapper">Backend Developer </span>
-                <span class="Typewriter__wrapper">Mobile Developer </span>
-                <span class="Typewriter__wrapper">Brand Identity Designer</span>
-                <span class="Typewriter__wrapper">Graphic Designer</span>
+                <span className="Typewriter__wrapper">Frontend Developer </span>
+                <span className="Typewriter__wrapper">Backend Developer </span>
+                <span className="Typewriter__wrapper">Mobile Developer </span>
+                <span className="Typewriter__wrapper">Brand Identity Designer</span>
+                <span className="Typewriter__wrapper">Graphic Designer</span>
                 {/* <span class="Typewriter__cursor">|</span> */}
               </div>
             </h1>
