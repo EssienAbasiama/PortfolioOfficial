@@ -7,7 +7,7 @@ import { styles } from "../styles";
 const Hero = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray(".Typewriter__wrapper");
-const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
+const tl = gsap.timeline({ repeat: -1, repeatDelay: -1 });
 titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
