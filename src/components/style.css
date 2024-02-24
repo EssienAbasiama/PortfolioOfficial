@@ -1,4 +1,4 @@
-.Typewriter{
+.Typewriter__wrapper{
     &:nth-of-type(5){
         /* color:#915EFF; */
         color:red;
