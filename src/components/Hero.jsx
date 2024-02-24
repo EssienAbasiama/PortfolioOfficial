@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 
 const Hero = () => {
-  const titles = gsap.utils.toArray(".Typewriter__wrapper");
+  const titles = gsap.utils.toArray("p");
     const tl = gsap.timeline();
     titles.forEach((title) => {
       const splitTitle = new SplitTextJS(title);
