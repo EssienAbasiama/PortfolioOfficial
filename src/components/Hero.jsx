@@ -25,7 +25,8 @@ const Hero = () => {
           <div class="flex space-x-1 items-center mt-3">
             <h1 class="text-white text-base font-bold lg:text-xl">a/an{"---  "}</h1>
             <h1 class="font-bold text-xl lg:text-3xl text-[#915EFF] ">
-            <div className="block Typewriter" data-testid="typewriter-wrapper">
+            <div className="flex flex-col Typewriter" data-testid="typewriter-wrapper">
+
                 <span class="Typewriter__wrapper">Frontend Developer </span>
                 <span class="Typewriter__wrapper">Backend Developer </span>
                 <span class="Typewriter__wrapper">Mobile Developer </span>
