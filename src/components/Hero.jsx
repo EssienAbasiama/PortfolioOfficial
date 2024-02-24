@@ -23,7 +23,7 @@ const Hero = () => {
           </h1>
 
           <div className="flex space-x-1 items-center mt-3">
-            <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---  "}</h1>
+            <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---        "}</h1>
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="flex flex-col Typewriter" data-testid="typewriter-wrapper">
 
