@@ -26,11 +26,11 @@ const Hero = () => {
             <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---        "}</h1>
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="Typewriter" data-testid="typewriter-wrapper">
-                <p className="Typewriter__wrapper leading-0 m-0">Frontend Developer </p>
-                <p className="Typewriter__wrapper leading-0 m-0">Backend Developer </p>
-                <p className="Typewriter__wrapper leading-0 m-0">Mobile Developer </p>
-                <p className="Typewriter__wrapper leading-0 m-0">Brand Identity Designer</p>
-                <p style={{ color: 'red' }} className="text-red-500 leading-0 m-0">Graphic Designer</p>
+                <p className="Typewriter__wrapper leading-none m-0">Frontend Developer </p>
+                <p className="Typewriter__wrapper leading-none m-0">Backend Developer </p>
+                <p className="Typewriter__wrapper leading-none m-0">Mobile Developer </p>
+                <p className="Typewriter__wrapper leading-none m-0">Brand Identity Designer</p>
+                <p style={{ color: 'red' }} className="text-red-500 leading-none m-0">Graphic Designer</p>
                 {/* <span class="Typewriter__cursor">|</span> */}
               </div>
             </h1>
