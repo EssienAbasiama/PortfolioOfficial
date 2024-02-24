@@ -33,8 +33,16 @@ import p2pfi from "./company/p2pfi.jpeg";
 import nestlypay from "./company/Nestlypay.jpeg";
 import groomlog from "./company/Groomlog.jpeg";
 import codelearnershub from "./company/p2pfi.jpeg";
+import geegpay from "./geegpay.png";
+import clearlink from "./geegpay.png";
+import getlinked from "./geegpay.png";
+import wibe from "./wibe.png";
 export {
   logo,
+  geegpay,
+  clearlink,
+  getlinked,
+  wibe,
   backend,
   creator,
   mobile,

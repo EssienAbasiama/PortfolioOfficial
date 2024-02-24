@@ -27,6 +27,7 @@ import {
   groomlog,
   p2pfi,
   nestlypay,
+  geegpay
 } from "../assets";
 
 export const navLinks = [
@@ -49,7 +50,7 @@ const services = [
     title: "Web Developer",
     icon: web,
   },
-  
+
   {
     title: "MobileApp Developer",
     icon: backend,
@@ -203,25 +204,26 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "GeegPay",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Explore my Finance Monitoring Web Page—a sleek solution for tracking spending and managing finances. Effortlessly monitor income, set budgets, and gain insights for smarter financial decisions. Elevate your financial journey with user-friendly tools. Discover a snapshot of financial wellness on my portfolio.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "chart.io",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "tooltip",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: geegpay,
+    source_code_link: "https://github.com/EssienAbasiama/geegpay-Challenge",
+    live_site_link: "https://geegpay-challenge-eta.vercel.app/"
   },
   {
     name: "Job IT",
