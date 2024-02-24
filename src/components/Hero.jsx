@@ -7,7 +7,7 @@ import { styles } from "../styles";
 const Hero = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray(".Typewriter__wrapper");
-const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
+const tl = gsap.timeline({ repeat: -1, repeatDelay: 0 });
 titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
@@ -45,14 +45,14 @@ console.log("titles", titles);
           </h1>
 
           <div className="flex space-x-1 items-center mt-3">
-            <h1 className="text-white text-base font-bold lg:text-xl">a/an{"---        "}</h1>
+            <h1 className="text-white text-base font-bold lg:text-xl">a/an{" "}</h1>
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
             <div className="Typewriter" data-testid="typewriter-wrapper">
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Frontend Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Backend Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Mobile Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Brand Identity Designer</p>
-        <p style={{ color: 'white', lineHeight: 0 }} className="Typewriter__wrapper text-red-500 m-0">Graphic Designer</p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Frontend Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Backend Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Mobile Developer </p>
+        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Brand Identity Designer</p>
+        <p style={{ color: 'white', lineHeight: 0 }} className="Typewriter__wrapper text-red-500 m-0">{" "} Graphic Designer</p>
       </div>
             </h1>
           </div>
