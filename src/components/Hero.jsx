@@ -7,20 +7,20 @@ import { styles } from "../styles";
 const Hero = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray(".Typewriter__wrapper");
-const tl = gsap.timeline();
+const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
 titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
     opacity: 0,
     y: 40,
     rotateX: -50,
-    stagger: 0.02,
+    stagger: 0.05,
   }, "<")
     .to(splitTitle.chars, {
       opacity: 0,
       y: -40,
       rotateX: 50,
-      stagger: 0.02,
+      stagger: 0.05,
     }, "<1");
 });
 
@@ -52,7 +52,7 @@ console.log("titles", titles);
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Backend Developer </p>
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Mobile Developer </p>
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">Brand Identity Designer</p>
-        <p style={{ color: 'red', lineHeight: 0 }} className="text-red-500 m-0">Graphic Designer</p>
+        <p style={{ color: 'white', lineHeight: 0 }} className="Typewriter__wrapper text-red-500 m-0">Graphic Designer</p>
       </div>
             </h1>
           </div>
