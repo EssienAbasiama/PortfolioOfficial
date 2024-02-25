@@ -50,9 +50,7 @@ console.log("titles", titles);
             <div className="Typewriter" data-testid="typewriter-wrapper">
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Frontend Developer </p>
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Backend Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Mobile Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Brand Identity Designer</p>
-        <p style={{ color: 'white', lineHeight: 0 }} className="Typewriter__wrapper text-red-500 m-0">{" "} Graphic Designer</p>
+        <p style={{ color: 'white', lineHeight: 0 }}  className="Typewriter__wrapper m-0">{" "} Mobile Developer </p>
       </div>
             </h1>
           </div>
