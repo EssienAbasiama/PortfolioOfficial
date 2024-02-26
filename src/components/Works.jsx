@@ -17,7 +17,6 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <AnimatePresence exitBeforeEnter>
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
         options={{
@@ -65,7 +64,6 @@ const ProjectCard = ({
         </div>
       </Tilt>
     </motion.div>
-    </AnimatePresence>
   );
 };
 
