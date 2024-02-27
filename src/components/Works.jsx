@@ -1,6 +1,6 @@
 import React from "react";
 import {Tilt} from "react-tilt";
-import { motion,AnimatePresence} from "framer-motion";
+import { motion} from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
