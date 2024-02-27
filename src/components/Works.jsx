@@ -70,7 +70,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div  variants={fadeIn("", "spring", index * 0.5, 0.75)}>
+      <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>My work</p>
         <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
       </motion.div>
