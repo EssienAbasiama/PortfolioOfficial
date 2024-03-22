@@ -38,7 +38,9 @@ import clearlink from "./clearlink.png";
 import getlinked from "./getlinked.png";
 import wibe from "./wibe.png";
 import grammce from "./grammercetamol.png"
+import movieBox from "./movieBox.png";
 export {
+  movieBox,
   logo,
   geegpay,
   clearlink,

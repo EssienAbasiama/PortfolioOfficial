@@ -32,6 +32,7 @@ import {
   wibe,
   clearlink,
   grammce,
+  movieBox
   
 } from "../assets";
 
@@ -52,22 +53,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "FrontEnd Developer",
     icon: web,
   },
 
   {
-    title: "MobileApp Developer",
+    title: "Backend Developer",
     icon: backend,
   },
   {
-    title: "Graphic Designer",
+    title: "MobileApp Developer",
     icon: creator,
   },
-  {
-    title: "Brand Identity Designer",
-    icon: creator,
-  },
+  
 ];
 
 const technologies = [
@@ -133,10 +131,10 @@ const experiences = [
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "UI/UX Design Transformation: Led a redesign resulting in a 40% user engagement boost and a 30% reduction in development cycles.",
+      "Technical Expertise: Implemented React-based architecture and Progressive Web App integration, enhancing performance and user satisfaction.",
+      "Collaboration and Communication: Established transparent channels, fostering knowledge sharing and timely project delivery.",
+      "Quality Assurance: Implemented rigorous code reviews, ensuring high-performance frontend solutions.",
     ],
   },
   {
@@ -159,10 +157,9 @@ const experiences = [
     iconBg: "#383E56",
     date: "Jan 2022 - Jan 2023",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Successfully reduced page load times by 50% through meticulous frontend asset optimization and implementation of performance best practices. This improvement significantly enhanced user experience, positively impacting search engine rankings and overall site responsiveness.",
+      "Led a project to achieve flawless cross-browser compatibility for a complex web application, ensuring consistent and seamless user experience across major browsers. This effort resolved user-reported issues, enhancing accessibility and broadening user reach.",
+      
     ],
   },
   {
@@ -172,10 +169,7 @@ const experiences = [
     iconBg: "#E6DEDD",
     date: "Jan 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Played a pivotal role in redesigning a critical user interface for seamless experiences across devices. Implemented media queries and responsive design principles, resulting in a 30% increase in mobile user engagement and enhanced accessibility.",
     ],
   },
 ];
@@ -319,6 +313,29 @@ const projects = [
     source_code_link: "https://github.com/EssienAbasiama/grammercetamol-interface",
 
     live_site_link: "https://grammercetamoll.netlify.app/"
+  },
+  {
+    name: "MovieBox",
+    description:
+      "Your gateway to cinematic delight. Explore, discover, and enjoy movies effortlessly with our app. Instant access to favorites, trailers, and more.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "api",
+        color: "green-text-gradient",
+      },
+      {
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: movieBox,
+    source_code_link: "https://github.com/EssienAbasiama/MBox",
+
+    live_site_link: "https://moviebox-amber.vercel.app/"
   },
   {
     name: "Trip Guide",

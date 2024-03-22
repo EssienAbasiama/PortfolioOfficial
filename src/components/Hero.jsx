@@ -3,11 +3,12 @@ import { gsap } from "gsap";
 import SplitTextJS from "split-text-js";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
+import EssienResume from "./../assets/EssienResume.pdf";
 
 const Hero = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray(".Typewriter__wrapper");
-const tl = gsap.timeline({ repeat: -1, repeatDelay: -1 });
+const tl = gsap.timeline({ repeat: 4, repeatDelay: 1 });
 titles.forEach((title) => {
   const splitTitle = new SplitTextJS(title);
   tl.from(splitTitle.chars, {
@@ -50,7 +51,6 @@ console.log("titles", titles);
             <div className="Typewriter" data-testid="typewriter-wrapper">
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Frontend Developer </p>
         <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Backend Developer </p>
-        <p style={{ color: 'white', lineHeight: 0 }}  className="Typewriter__wrapper m-0">{" "} Mobile Developer </p>
       </div>
             </h1>
           </div>
@@ -67,8 +67,8 @@ console.log("titles", titles);
                   h-[40px] rounded-md uppercase font-semibold justify-center  lg:text-base lg:w-[130px] lg:h-[50px] bg-[#222] text-[13px] border-b-[#915EFF] border-t-0 border-r-0 border-l-0 lg:mt-3"
             >
               <a
-                href="/assets/Essien-Abasiama-FrontEnd-Resume.pdf"
-                download="Resume"
+                href={EssienResume}
+                download="EssienAbasiamaResume"
                 class=""
               >
                 Resume 
