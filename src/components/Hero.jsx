@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import SplitTextJS from "split-text-js";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import EssienResume from "./../assets/EssienResume.pdf";
+import EssienResume from "./../assets/EssienAbasiamaReactJsResume.pdf";
 
 const Hero = () => {
   useEffect(() => {
