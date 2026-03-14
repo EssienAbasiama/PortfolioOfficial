@@ -8,30 +8,37 @@ import EssienResume from "./../assets/EssienAbasiamaReactJsResume.pdf";
 const Hero = () => {
   useEffect(() => {
     const titles = gsap.utils.toArray(".Typewriter__wrapper");
-const tl = gsap.timeline({ repeat: 4, repeatDelay: 1 });
-titles.forEach((title) => {
-  const splitTitle = new SplitTextJS(title);
-  tl.from(splitTitle.chars, {
-    opacity: 0,
-    y: 10,
-    rotateX: -20,
-    stagger: 0.1,
-  }, "<")
-    .to(splitTitle.chars, {
-      opacity: 0,
-      y: -10,
-      rotateX: 20,
-      stagger: 0.05,
-    }, "<1");
-});
+    const tl = gsap.timeline({ repeat: 4, repeatDelay: 1 });
+    titles.forEach((title) => {
+      const splitTitle = new SplitTextJS(title);
+      tl.from(
+        splitTitle.chars,
+        {
+          opacity: 0,
+          y: 10,
+          rotateX: -20,
+          stagger: 0.1,
+        },
+        "<",
+      ).to(
+        splitTitle.chars,
+        {
+          opacity: 0,
+          y: -10,
+          rotateX: 20,
+          stagger: 0.05,
+        },
+        "<1",
+      );
+    });
 
-console.log("titles", titles);
+    console.log("titles", titles);
   }, []);
-  
+
   return (
     <section className={`relative w-full h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[120px]  max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[88px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
@@ -46,19 +53,31 @@ console.log("titles", titles);
           </h1>
 
           <div className="flex space-x-1 items-center mt-3">
-            <h1 className="text-white text-base font-bold lg:text-xl">a/an{" "}</h1>
+            <h1 className="text-white text-base font-bold lg:text-xl">a/an </h1>
             <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
-            <div className="Typewriter" data-testid="typewriter-wrapper">
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Frontend Developer </p>
-        <p style={{ lineHeight: 0 }} className="Typewriter__wrapper m-0">{" "} Backend Developer </p>
-      </div>
+              <div className="Typewriter" data-testid="typewriter-wrapper">
+                <p
+                  style={{ lineHeight: 0 }}
+                  className="Typewriter__wrapper m-0"
+                >
+                  {" "}
+                  Frontend Developer{" "}
+                </p>
+                <p
+                  style={{ lineHeight: 0 }}
+                  className="Typewriter__wrapper m-0"
+                >
+                  {" "}
+                  Backend Developer{" "}
+                </p>
+              </div>
             </h1>
           </div>
           <p class="text-base lg:text-lg pt-3 pb-4">
-            Welcome to my digital world! I specialize in crafting<br>
-            </br> 
-            captivating web applications and seamless user interfaces.<br></br> 
-            With creativity and precision, I bring ideas to life and empower<br></br> 
+            Welcome to my digital world! I specialize in crafting<br></br>
+            captivating web applications and seamless user interfaces.<br></br>
+            With creativity and precision, I bring ideas to life and empower
+            <br></br>
             businesses to thrive in the ever-evolving digital landscape.
           </p>
           <div class="flex items-center gap-2 ">
@@ -66,12 +85,8 @@ console.log("titles", titles);
               class="cursor-pointer flex items-center gap-2 border-[4px] w-[99px]
                   h-[40px] rounded-md uppercase font-semibold justify-center  lg:text-base lg:w-[130px] lg:h-[50px] bg-[#222] text-[13px] border-b-[#915EFF] border-t-0 border-r-0 border-l-0 lg:mt-3"
             >
-              <a
-                href={EssienResume}
-                download="EssienAbasiamaResume"
-                class=""
-              >
-                Resume 
+              <a href={EssienResume} download="EssienAbasiamaResume" class="">
+                Resume
               </a>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +102,7 @@ console.log("titles", titles);
           </div>
         </div>
       </div>
-      <div style={{ marginTop: "50px" }}></div>;
+
       {/* <ComputersCanvas /> */}
       <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center">
         <a href="#about">
