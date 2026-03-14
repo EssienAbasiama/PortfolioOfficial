@@ -33,7 +33,7 @@ import {
   clearlink,
   grammce,
   movieBox
-  
+
 } from "../assets";
 
 export const navLinks = [
@@ -53,19 +53,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "FrontEnd Developer",
+    title: "Mobile Application Engineer",
     icon: web,
   },
 
   {
-    title: "Backend Developer",
+    title: "React Native Developer",
     icon: backend,
   },
   {
-    title: "MobileApp Developer",
+    title: "Full-Stack JavaScript Engineer",
     icon: creator,
   },
-  
+
 ];
 
 const technologies = [
@@ -159,7 +159,7 @@ const experiences = [
     points: [
       "Successfully reduced page load times by 50% through meticulous frontend asset optimization and implementation of performance best practices. This improvement significantly enhanced user experience, positively impacting search engine rankings and overall site responsiveness.",
       "Led a project to achieve flawless cross-browser compatibility for a complex web application, ensuring consistent and seamless user experience across major browsers. This effort resolved user-reported issues, enhancing accessibility and broadening user reach.",
-      
+
     ],
   },
   {

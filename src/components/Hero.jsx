@@ -1,91 +1,132 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
-import SplitTextJS from "split-text-js";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import EssienResume from "./../assets/EssienAbasiamaReactJsResume.pdf";
 
 const Hero = () => {
   useEffect(() => {
-    const titles = gsap.utils.toArray(".Typewriter__wrapper");
-    const tl = gsap.timeline({ repeat: 4, repeatDelay: 1 });
-    titles.forEach((title) => {
-      const splitTitle = new SplitTextJS(title);
-      tl.from(
-        splitTitle.chars,
-        {
-          opacity: 0,
-          y: 10,
-          rotateX: -20,
-          stagger: 0.1,
-        },
-        "<",
-      ).to(
-        splitTitle.chars,
-        {
-          opacity: 0,
-          y: -10,
-          rotateX: 20,
-          stagger: 0.05,
-        },
-        "<1",
-      );
+    const ctx = gsap.context(() => {
+      const titles = gsap.utils.toArray(".Typewriter__wrapper");
+
+      if (!titles.length) {
+        return;
+      }
+
+      gsap.set(titles, {
+        opacity: 0,
+        y: 16,
+        position: "absolute",
+        left: 0,
+        top: 0,
+        width: "100%",
+      });
+
+      const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.4 });
+
+      titles.forEach((title) => {
+        tl.to(title, {
+          opacity: 1,
+          y: 0,
+          duration: 0.45,
+          ease: "power2.out",
+        })
+          .to(title, {
+            opacity: 1,
+            y: 0,
+            duration: 1.4,
+            ease: "none",
+          })
+          .to(title, {
+            opacity: 0,
+            y: -16,
+            duration: 0.35,
+            ease: "power2.in",
+          });
+      });
     });
 
-    console.log("titles", titles);
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className={`relative w-full h-screen mx-auto`}>
+    <section className={`relative w-full min-h-[980px] sm:h-screen mx-auto`}>
       <div
-        className={`absolute inset-0 top-[88px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[78px] sm:top-[88px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-4 sm:gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915EFF]" />
           <div className="w-1 sm:h-36 h-40 violet-gradient" />
         </div>
 
-        <div>
-          <h1 className={`${styles.heroHeadText} text-white`}>
-            Hi there,
+        <div className="max-w-3xl w-full pr-1">
+          <div
+            className="Typewriter relative overflow-hidden min-h-[18px] sm:min-h-[16px] lg:min-h-[20px]"
+            data-testid="typewriter-wrapper"
+          >
+            <p
+              style={{ lineHeight: 1.1 }}
+              className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
+            >
+              Senior Mobile Engineer
+            </p>
+            <p
+              style={{ lineHeight: 1.1 }}
+              className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
+            >
+              React Native + Backend Systems
+            </p>
+          </div>
+
+          <h1 className={`${styles.heroHeadText} text-white mt-0`}>
+            Mobile Engineer building scalable
             <br></br>
-            I'm <span className="text-[#915EFF]">Essien</span>
+            <span className="text-[#915EFF]">React Native applications.</span>
           </h1>
 
-          <div className="flex space-x-1 items-center mt-3">
-            <h1 className="text-white text-base font-bold lg:text-xl">a/an </h1>
-            <h1 className="font-bold text-xl lg:text-3xl text-[#915EFF] ">
-              <div className="Typewriter" data-testid="typewriter-wrapper">
-                <p
-                  style={{ lineHeight: 0 }}
-                  className="Typewriter__wrapper m-0"
-                >
-                  {" "}
-                  Frontend Developer{" "}
-                </p>
-                <p
-                  style={{ lineHeight: 0 }}
-                  className="Typewriter__wrapper m-0"
-                >
-                  {" "}
-                  Backend Developer{" "}
-                </p>
-              </div>
-            </h1>
+          <div className="pt-3 sm:pt-4 space-y-3 sm:space-y-4 max-w-2xl">
+            <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-[24px] sm:leading-[28px] lg:leading-[30px] text-white/90">
+              I specialize in building production mobile applications with React
+              Native and modern backend systems.
+            </p>
+            <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-[24px] sm:leading-[28px] lg:leading-[30px] text-white/90">
+              I have successfully shipped multiple apps to the Apple App Store
+              and build software that helps organizations improve productivity,
+              workforce operations, and data-driven decision making.
+            </p>
           </div>
-          <p class="text-base lg:text-lg pt-3 pb-4">
-            Welcome to my digital world! I specialize in crafting<br></br>
-            captivating web applications and seamless user interfaces.<br></br>
-            With creativity and precision, I bring ideas to life and empower
-            <br></br>
-            businesses to thrive in the ever-evolving digital landscape.
-          </p>
-          <div class="flex items-center gap-2 ">
+
+          <div className="mt-5 sm:mt-6 inline-flex flex-col gap-1 rounded-2xl border border-[#915EFF]/30 bg-[#915EFF]/10 px-4 py-3">
+            <p className="text-[#915EFF] font-semibold text-[14px] sm:text-[15px] lg:text-[17px] tracking-wide">
+              React Native Mobile Engineer
+            </p>
+            <p className="text-white font-medium text-[12px] sm:text-[13px] lg:text-[15px]">
+              2 Apps shipped to the Apple App Store
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-4 sm:pt-5 pb-5">
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              React Native
+            </span>
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              TypeScript
+            </span>
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              Node.js
+            </span>
+          </div>
+
+          <div className="flex items-center gap-2">
             <div
-              class="cursor-pointer flex items-center gap-2 border-[4px] w-[99px]
+              className="cursor-pointer flex items-center gap-2 border-[4px] w-[99px]
                   h-[40px] rounded-md uppercase font-semibold justify-center  lg:text-base lg:w-[130px] lg:h-[50px] bg-[#222] text-[13px] border-b-[#915EFF] border-t-0 border-r-0 border-l-0 lg:mt-3"
             >
-              <a href={EssienResume} download="EssienAbasiamaResume" class="">
+              <a
+                href={EssienResume}
+                download="EssienAbasiamaResume"
+                className=""
+              >
                 Resume
               </a>
               <svg
