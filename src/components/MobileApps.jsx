@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import hrScreenshot1 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 22.14.10.jpeg";
+import hrScreenshot2 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 22.14.12.jpeg";
+import hrScreenshot3 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 22.14.13.jpeg";
+import hrScreenshot4 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 3.jpeg";
+import hrScreenshot5 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 4.jpeg";
+import hrScreenshot6 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 5.jpeg";
+import hrScreenshot7 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 6.jpeg";
+import hrScreenshot8 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 7.jpeg";
 
 const mobileApps = [
   {
@@ -16,18 +24,148 @@ const mobileApps = [
     image: "/images/qclosehr-mobile.png",
     description:
       "QCloseHR is a cloud-based HR and workforce management platform designed for modern organizations. It enables businesses to manage employee attendance, productivity, HR operations, and workforce analytics through a mobile-first experience.",
+    caseStudy: {
+      projectOverview: [
+        { label: "Role", value: "Senior Mobile Engineer" },
+        { label: "Platform", value: "iOS and Android" },
+        { label: "Technology", value: "React Native" },
+        { label: "Status", value: "Production Application" },
+      ],
+      problem: [
+        "Many organizations struggle with inefficient HR processes, manual attendance tracking, and limited visibility into employee productivity. Traditional HR systems are often complex and not optimized for mobile-first workflows.",
+        "Organizations needed a simple, mobile-first platform that allows employees and managers to manage HR operations from anywhere while maintaining accurate workforce data.",
+      ],
+      solution: [
+        "QCloseHR was designed as a mobile-first HR and workforce management platform that allows organizations to manage employee attendance, tasks, leave requests, and workforce analytics directly from mobile devices.",
+        "The mobile application integrates with backend services to deliver real-time workforce insights and productivity data for employees, managers, and administrators.",
+      ],
+      myRoleIntro:
+        "As the Senior Mobile Engineer, I was responsible for the end-to-end development of the mobile application.",
+      responsibilities: [
+        "Designing the mobile application architecture",
+        "Developing core mobile UI systems using React Native",
+        "Integrating the mobile client with backend APIs",
+        "Implementing authentication and secure API communication",
+        "Optimizing performance for mobile devices",
+        "Preparing builds and deployments for the App Store",
+      ],
+      architecture: [
+        {
+          title: "Mobile Application",
+          items: [
+            "React Native",
+            "TypeScript",
+            "Reusable component-based UI architecture",
+          ],
+        },
+        {
+          title: "Backend Services",
+          items: ["Node.js", "Laravel", "Java Spring Boot"],
+        },
+        {
+          title: "API Communication",
+          items: [
+            "REST APIs",
+            "Secure authentication and token-based requests",
+          ],
+        },
+        {
+          title: "Deployment",
+          items: ["Apple App Store", "Google Play Store"],
+        },
+      ],
+      challenges: [
+        {
+          title: "Performance Optimization",
+          description:
+            "Optimized API requests and improved data loading efficiency to ensure fast and reliable user interactions.",
+        },
+        {
+          title: "Reusable Component Systems",
+          description:
+            "Built reusable UI components to accelerate development and maintain consistency across the application.",
+        },
+        {
+          title: "Secure API Integration",
+          description:
+            "Implemented secure authentication and reliable API communication between the mobile application and backend systems.",
+        },
+      ],
+      impact: [
+        "Delivered a production HR platform used internally by the organization",
+        "Enabled mobile workforce management and attendance tracking",
+        "Improved operational visibility and productivity insights",
+        "Established reusable mobile architecture for future products",
+      ],
+    },
     features: [
-      "Employee time and attendance tracking",
-      "Task and productivity monitoring",
-      "Leave and absence management",
-      "Workforce analytics and reporting",
-      "Mobile workforce management",
+      "Attendance & Time Tracking: Employees can clock in/out, track working hours, and monitor daily attendance directly from the mobile app.",
+      "Shift & Timesheet Management: Supports shift scheduling, timesheet tracking, and overtime monitoring.",
+      "Leave & Time-Off Management: Employees can request leave, view balances, and managers can approve or reject requests.",
+      "Payroll & Payslip Access: Employees can securely access payroll information and payslips.",
+      "Task & To-Do Management: Allows employees to manage assigned tasks and track productivity.",
+      "Invoices & Requests: Employees and teams can submit internal requests and manage service or invoice submissions.",
+      "Calendar & Scheduling: Integrated calendar system for managing work schedules and HR events.",
+      "Disciplinary Management: Supports documentation and tracking of disciplinary records.",
+      "Performance Management: Includes KPI tracking, employee appraisals, and performance evaluation tools.",
+      "Policies & Procedures: Centralized access to company HR policies and procedures.",
+      "Announcements: Allows organizations to broadcast company announcements to employees.",
+      "Workforce Reporting & Insights: Provides workforce analytics and HR reporting dashboards.",
     ],
     tech: [
       "React Native",
       "REST APIs",
       "Node.js backend integration",
       "Mobile UI component systems",
+    ],
+    techGroups: [
+      {
+        title: "Mobile Development",
+        items: [
+          "React Native",
+          "TypeScript",
+          "Cross-platform mobile architecture",
+        ],
+      },
+      {
+        title: "Backend Integration",
+        items: [
+          "Laravel (RESTful API services)",
+          "Secure API communication",
+          "Token-based authentication",
+        ],
+      },
+      {
+        title: "API Communication",
+        items: ["REST APIs", "Axios / HTTP networking", "JSON data handling"],
+      },
+      {
+        title: "Mobile UI Systems",
+        items: [
+          "Component-based UI architecture",
+          "Reusable UI component systems",
+          "Responsive mobile layouts",
+        ],
+      },
+      {
+        title: "Mobile Tooling & Deployment",
+        items: [
+          "Android Studio",
+          "Xcode",
+          "Apple App Store deployment",
+          "Google Play Store deployment",
+        ],
+      },
+    ],
+    screenshots: [
+      hrScreenshot1,
+      hrScreenshot2,
+      hrScreenshot3,
+      hrScreenshot4,
+      hrScreenshot5,
+      hrScreenshot6,
+      hrScreenshot7,
+      hrScreenshot8,
     ],
   },
   {
@@ -136,9 +274,51 @@ const IPhoneMockup = ({ app, index, onClick }) => {
 const AppModal = ({ app, onClose }) => {
   if (!app) return null;
 
+  const caseStudy = app.caseStudy;
+  const [activeScreenshot, setActiveScreenshot] = useState(null);
+  const screenshotsRailRef = useRef(null);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollLeftRef = useRef(0);
+  const didDragRef = useRef(false);
+
+  const handleRailPointerDown = (e) => {
+    const rail = screenshotsRailRef.current;
+    if (!rail) return;
+
+    didDragRef.current = false;
+    dragStartXRef.current = e.clientX;
+    dragStartScrollLeftRef.current = rail.scrollLeft;
+    rail.style.cursor = "grabbing";
+  };
+
+  const handleRailPointerMove = (e) => {
+    const rail = screenshotsRailRef.current;
+    if (!rail || e.buttons !== 1) return;
+
+    const deltaX = e.clientX - dragStartXRef.current;
+    if (Math.abs(deltaX) > 4) {
+      didDragRef.current = true;
+    }
+
+    rail.scrollLeft = dragStartScrollLeftRef.current - deltaX;
+  };
+
+  const handleRailPointerUp = () => {
+    const rail = screenshotsRailRef.current;
+    if (rail) {
+      rail.style.cursor = "grab";
+    }
+
+    if (didDragRef.current) {
+      requestAnimationFrame(() => {
+        didDragRef.current = false;
+      });
+    }
+  };
+
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      className="fixed inset-0 z-[1200] flex items-center justify-center p-4"
       onClick={onClose}
     >
       {/* Backdrop */}
@@ -150,7 +330,7 @@ const AppModal = ({ app, onClose }) => {
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.2 }}
-        className="relative bg-[#050816] border border-[#915EFF]/30 rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 z-10"
+        className="relative bg-[#050816] border border-[#915EFF]/30 rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 z-[1210]"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
@@ -183,6 +363,156 @@ const AppModal = ({ app, onClose }) => {
           </p>
         </div>
 
+        {caseStudy && (
+          <>
+            {/* Project Overview */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Project Overview
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                {caseStudy.projectOverview.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-xl bg-[#1d1836]/70 border border-[#915EFF]/20 px-3 py-3"
+                  >
+                    <p className="text-[11px] uppercase tracking-wider text-secondary mb-1">
+                      {item.label}
+                    </p>
+                    <p className="text-white text-[14px] font-medium">
+                      {item.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Problem */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Problem
+              </h3>
+              <div className="space-y-3">
+                {caseStudy.problem.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-secondary text-[14px] leading-[26px]"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            {/* Solution */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Solution
+              </h3>
+              <div className="space-y-3">
+                {caseStudy.solution.map((paragraph, i) => (
+                  <p
+                    key={i}
+                    className="text-secondary text-[14px] leading-[26px]"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
+
+            {/* My Role */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                My Role
+              </h3>
+              <p className="text-secondary text-[14px] leading-[26px] mb-3">
+                {caseStudy.myRoleIntro}
+              </p>
+              <p className="text-white text-[13px] font-medium uppercase tracking-wide mb-2">
+                Responsibilities included:
+              </p>
+              <ul className="space-y-2">
+                {caseStudy.responsibilities.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-secondary text-[14px]"
+                  >
+                    <span className="text-[#915EFF] mt-[3px] shrink-0">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Architecture */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Architecture
+              </h3>
+              <div className="space-y-3">
+                {caseStudy.architecture.map((block) => (
+                  <div
+                    key={block.title}
+                    className="rounded-xl bg-[#1d1836]/70 border border-[#915EFF]/20 px-3 py-3"
+                  >
+                    <p className="text-white text-[14px] font-semibold mb-2">
+                      {block.title}
+                    </p>
+                    <ul className="space-y-1">
+                      {block.items.map((item, i) => (
+                        <li key={i} className="text-secondary text-[13px]">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Engineering Challenges */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Engineering Challenges
+              </h3>
+              <div className="space-y-3">
+                {caseStudy.challenges.map((challenge) => (
+                  <div
+                    key={challenge.title}
+                    className="rounded-xl bg-[#1d1836]/70 border border-[#915EFF]/20 px-3 py-3"
+                  >
+                    <p className="text-white text-[14px] font-semibold mb-1">
+                      {challenge.title}
+                    </p>
+                    <p className="text-secondary text-[13px] leading-[24px]">
+                      {challenge.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Impact */}
+            <div className="mb-6">
+              <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+                Impact
+              </h3>
+              <ul className="space-y-2">
+                {caseStudy.impact.map((item, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-2 text-secondary text-[14px]"
+                  >
+                    <span className="text-[#915EFF] mt-[3px] shrink-0">▸</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
+
         {/* Key Features */}
         <div className="mb-6">
           <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
@@ -206,16 +536,38 @@ const AppModal = ({ app, onClose }) => {
           <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
             Technologies Used
           </h3>
-          <div className="flex flex-wrap gap-2">
-            {app.tech.map((t, i) => (
-              <span
-                key={i}
-                className="text-[12px] bg-[#1d1836] text-[#915EFF] border border-[#915EFF]/30 px-3 py-1 rounded-full"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
+          {app.techGroups ? (
+            <div className="space-y-3">
+              {app.techGroups.map((group) => (
+                <div
+                  key={group.title}
+                  className="rounded-xl bg-[#1d1836]/70 border border-[#915EFF]/20 px-3 py-3"
+                >
+                  <p className="text-white text-[14px] font-semibold mb-2">
+                    {group.title}
+                  </p>
+                  <ul className="space-y-1">
+                    {group.items.map((item, i) => (
+                      <li key={i} className="text-secondary text-[13px]">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="flex flex-wrap gap-2">
+              {app.tech.map((t, i) => (
+                <span
+                  key={i}
+                  className="text-[12px] bg-[#1d1836] text-[#915EFF] border border-[#915EFF]/30 px-3 py-1 rounded-full"
+                >
+                  {t}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Screenshots placeholder */}
@@ -223,18 +575,58 @@ const AppModal = ({ app, onClose }) => {
           <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
             Screenshots
           </h3>
-          <div className="flex gap-3 overflow-x-auto pb-2">
-            {[1, 2, 3].map((n) => (
+          {app.screenshots?.length ? (
+            <>
+              <p className="text-secondary text-[12px] mb-2">
+                Tap any screenshot to magnify.
+              </p>
               <div
-                key={n}
-                className="shrink-0 w-[100px] h-[180px] rounded-xl bg-[#1d1836] border border-[#915EFF]/20 flex items-center justify-center"
+                ref={screenshotsRailRef}
+                className="flex gap-3 overflow-x-auto pb-2 cursor-grab select-none [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                onPointerDown={handleRailPointerDown}
+                onPointerMove={handleRailPointerMove}
+                onPointerUp={handleRailPointerUp}
+                onPointerLeave={handleRailPointerUp}
               >
-                <span className="text-secondary text-[10px] text-center px-2">
-                  Screenshot {n}
-                </span>
+                {app.screenshots.map((shot, index) => (
+                  <button
+                    key={`shot-${index}`}
+                    type="button"
+                    onClick={(e) => {
+                      if (didDragRef.current) {
+                        e.preventDefault();
+                        return;
+                      }
+
+                      setActiveScreenshot(shot);
+                    }}
+                    className="shrink-0 w-[108px] h-[192px] rounded-xl border border-[#915EFF]/20 overflow-hidden bg-[#1d1836] transition-transform duration-200 hover:scale-[1.03]"
+                    aria-label={`Open screenshot ${index + 1}`}
+                  >
+                    <img
+                      src={shot}
+                      alt={`${app.name} screenshot ${index + 1}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </button>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          ) : (
+            <div className="flex gap-3 overflow-x-auto pb-2">
+              {[1, 2, 3].map((n) => (
+                <div
+                  key={n}
+                  className="shrink-0 w-[100px] h-[180px] rounded-xl bg-[#1d1836] border border-[#915EFF]/20 flex items-center justify-center"
+                >
+                  <span className="text-secondary text-[10px] text-center px-2">
+                    Screenshot {n}
+                  </span>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Store CTAs */}
@@ -277,6 +669,29 @@ const AppModal = ({ app, onClose }) => {
             View on Play Store
           </a>
         </div>
+
+        {activeScreenshot && (
+          <div
+            className="fixed inset-0 z-[1300] flex items-center justify-center p-4"
+            onClick={() => setActiveScreenshot(null)}
+          >
+            <div className="absolute inset-0 bg-black/85 backdrop-blur-sm" />
+            <button
+              type="button"
+              onClick={() => setActiveScreenshot(null)}
+              className="absolute top-5 right-5 z-[1310] w-10 h-10 rounded-full bg-white/15 hover:bg-white/25 text-white text-2xl leading-none"
+              aria-label="Close screenshot preview"
+            >
+              ×
+            </button>
+            <img
+              src={activeScreenshot}
+              alt={`${app.name} enlarged screenshot`}
+              className="relative z-[1310] max-h-[88vh] max-w-[92vw] w-auto h-auto rounded-xl border border-[#915EFF]/30 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
       </motion.div>
     </div>
   );

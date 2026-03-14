@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
 import meta from "./company/meta.png";
+import qclose from "./company/qclose.svg";
 import shopify from "./company/shopify.png";
 import starbucks from "./company/starbucks.png";
 import tesla from "./company/tesla.png";
@@ -67,6 +68,7 @@ export {
   typescript,
   threejs,
   meta,
+  qclose,
   shopify,
   starbucks,
   tesla,

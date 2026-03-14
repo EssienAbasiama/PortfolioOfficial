@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import EssienResume from "./../assets/EssienAbasiamaReactJsResume.pdf";
+import EssienResume from "./../assets/Essien_Abasiama_Senior_Mobile_Engineer_Resume.pdf";
 
 const Hero = () => {
   useEffect(() => {
@@ -101,7 +101,7 @@ const Hero = () => {
               React Native Mobile Engineer
             </p>
             <p className="text-white font-medium text-[12px] sm:text-[13px] lg:text-[15px]">
-              2 Apps shipped to the Apple App Store
+              2 apps shipped to the Apple App Store and Play Store
             </p>
           </div>
 
@@ -124,7 +124,7 @@ const Hero = () => {
             >
               <a
                 href={EssienResume}
-                download="EssienAbasiamaResume"
+                download="Essien_Abasiama_Senior_Mobile_Engineer_Resume"
                 className=""
               >
                 Resume

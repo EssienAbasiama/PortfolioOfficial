@@ -16,6 +16,7 @@ import {
   figma,
   docker,
   meta,
+  qclose,
   starbucks,
   tesla,
   shopify,
@@ -124,6 +125,26 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Senior Mobile Engineer",
+    company_name: "QClose",
+    icon: qclose,
+    iconBg: "#383E56",
+    date: "May 2024 - Present",
+    points: [
+      "Led the development of production mobile applications using React Native, delivering scalable cross-platform solutions for iOS and Android.",
+      "Designed and implemented the mobile architecture for multiple company products.",
+      "Built and shipped production React Native applications deployed to the Apple App Store.",
+      "Developed complex mobile interfaces using reusable component systems and modern UI patterns.",
+      "Integrated mobile applications with backend services built with Node.js, Laravel, and Java Spring Boot.",
+      "Implemented secure authentication systems and efficient API communication layers.",
+      "Optimized mobile performance, improving responsiveness and API interaction efficiency.",
+      "Collaborated with cross-functional teams to deliver reliable mobile features aligned with product goals.",
+      "Delivered multiple production mobile applications used by the organization.",
+      "Improved mobile performance and application reliability.",
+      "Established reusable mobile UI systems that accelerated development across products.",
+    ],
+  },
   {
     title: "FrontEnd Engineer Lead",
     company_name: "Groomlog",
