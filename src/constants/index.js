@@ -224,6 +224,28 @@ const testimonials = [
 
 const projects = [
   {
+    name: "Wibe Studio",
+    description:
+      "California-based Fashion Studio: Crafting unique designs and exquisite jewelry. Fashion, our art, transcends boundaries with creativity and happiness. Our vision is to make fashion easy and delightful for all.",
+    tags: [
+      {
+        name: "reactjs",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "animation.css",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Javascript",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: wibe,
+    source_code_link: "https://github.com/EssienAbasiama/wibe-studio-house",
+    live_site_link: "https://wibe-studio-umber.vercel.app/"
+  },
+  {
     name: "GeegPay",
     description:
       "Explore my Finance Monitoring Web Page—a sleek solution for tracking spending and managing finances. Effortlessly monitor income, set budgets, and gain insights for smarter financial decisions. Elevate your financial journey with user-friendly tools. Discover a snapshot of financial wellness on my portfolio.",
@@ -268,28 +290,7 @@ const projects = [
 
     live_site_link: "https://get-linked2-0.vercel.app/"
   },
-  {
-    name: "Wibe Studio",
-    description:
-      "California-based Fashion Studio: Crafting unique designs and exquisite jewelry. Fashion, our art, transcends boundaries with creativity and happiness. Our vision is to make fashion easy and delightful for all.",
-    tags: [
-      {
-        name: "reactjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "animation.css",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Javascript",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: wibe,
-    source_code_link: "https://github.com/EssienAbasiama/wibe-studio-house",
-    live_site_link: "https://wibe-studio-umber.vercel.app/"
-  },
+
   {
     name: "ClearLink",
     description:
