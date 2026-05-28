@@ -85,9 +85,8 @@ const Hero = () => {
           </div>
 
           <h1 className={`${styles.heroHeadText} text-white mt-0`}>
-            Engineer building for
-            <br></br>
-            <span className="text-[#915EFF]">web and mobile.</span>
+            <span className="block">Frontend &amp;</span>
+            <span className="block text-[#915EFF]">Mobile Engineer.</span>
           </h1>
 
           <div className="pt-3 sm:pt-4 space-y-3 sm:space-y-4 max-w-2xl">
