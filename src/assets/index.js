@@ -30,6 +30,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import watchcord from "./carrent.png";
+import grandx from "./jobit.png";
 import p2pfi from "./company/p2pfi.jpeg";
 import nestlypay from "./company/Nestlypay.jpeg";
 import groomlog from "./company/Groomlog.jpeg";
@@ -47,6 +49,8 @@ export {
   clearlink,
   getlinked,
   wibe,
+  watchcord,
+  grandx,
   backend,
   creator,
   mobile,

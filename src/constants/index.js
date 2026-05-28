@@ -33,7 +33,9 @@ import {
   wibe,
   clearlink,
   grammce,
-  movieBox
+  movieBox,
+  watchcord,
+  grandx,
 
 } from "../assets";
 
@@ -54,10 +56,9 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Mobile Application Engineer",
+    title: "Frontend Engineer",
     icon: web,
   },
-
   {
     title: "React Native Developer",
     icon: backend,
@@ -66,7 +67,6 @@ const services = [
     title: "Full-Stack JavaScript Engineer",
     icon: creator,
   },
-
 ];
 
 const technologies = [
@@ -244,6 +244,50 @@ const projects = [
     image: wibe,
     source_code_link: "https://github.com/EssienAbasiama/wibe-studio-house",
     live_site_link: "https://wibe-studio-umber.vercel.app/"
+  },
+  {
+    name: "WatchCord",
+    description:
+      "A multi-user Discord monitoring platform built as a React + Vite SPA. Features a multi-panel dashboard with real-time log feeds, filterable tables, JWT authentication, and a 4-step onboarding flow — showcasing complex React state management and polished UI engineering.",
+    tags: [
+      {
+        name: "React + Vite",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Node.js / Express",
+        color: "green-text-gradient",
+      },
+      {
+        name: "React Router",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: watchcord,
+    source_code_link: "https://github.com/EssienAbasiama/discord-sentinel",
+    live_site_link: "https://analyzed-winners-individually-perhaps.trycloudflare.com",
+  },
+  {
+    name: "GrandX Studio",
+    description:
+      "A premium design & technology studio website featuring scroll-driven animations, marquee effects, and a fully responsive UI. Built with React to demonstrate high-end frontend craft — every interaction refined to deliver an extraordinary web experience.",
+    tags: [
+      {
+        name: "React",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "CSS Animations",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Responsive Design",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: grandx,
+    source_code_link: "https://github.com/EssienAbasiama/grandx-website",
+    live_site_link: "https://grandx.vercel.app/",
   },
   {
     name: "GeegPay",
