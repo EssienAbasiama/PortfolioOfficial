@@ -68,44 +68,52 @@ const Hero = () => {
               style={{ lineHeight: 1.1 }}
               className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
             >
-              Senior Mobile Engineer
+              Frontend Engineer
             </p>
             <p
               style={{ lineHeight: 1.1 }}
               className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
             >
-              React Native + Backend Systems
+              Mobile App Engineer
+            </p>
+            <p
+              style={{ lineHeight: 1.1 }}
+              className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
+            >
+              React · React Native · Node.js
             </p>
           </div>
 
           <h1 className={`${styles.heroHeadText} text-white mt-0`}>
-            Mobile Engineer building scalable
+            Engineer building for
             <br></br>
-            <span className="text-[#915EFF]">React Native applications.</span>
+            <span className="text-[#915EFF]">web and mobile.</span>
           </h1>
 
           <div className="pt-3 sm:pt-4 space-y-3 sm:space-y-4 max-w-2xl">
             <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-[24px] sm:leading-[28px] lg:leading-[30px] text-white/90">
-              I specialize in building production mobile applications with React
-              Native and modern backend systems.
+              I build high-quality web interfaces with React and production
+              mobile applications with React Native.
             </p>
             <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-[24px] sm:leading-[28px] lg:leading-[30px] text-white/90">
-              I have successfully shipped multiple apps to the Apple App Store
-              and build software that helps organizations improve productivity,
-              workforce operations, and data-driven decision making.
+              From pixel-perfect frontend UIs to apps shipped on the App Store
+              and Play Store — I deliver software that performs and scales.
             </p>
           </div>
 
           <div className="mt-5 sm:mt-6 inline-flex flex-col gap-1 rounded-2xl border border-[#915EFF]/30 bg-[#915EFF]/10 px-4 py-3">
             <p className="text-[#915EFF] font-semibold text-[14px] sm:text-[15px] lg:text-[17px] tracking-wide">
-              React Native Mobile Engineer
+              Frontend & Mobile Engineer
             </p>
             <p className="text-white font-medium text-[12px] sm:text-[13px] lg:text-[15px]">
-              2 apps shipped to the Apple App Store and Play Store
+              Web apps · 2 apps shipped to the App Store and Play Store
             </p>
           </div>
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-4 sm:pt-5 pb-5">
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              React.js
+            </span>
             <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
               React Native
             </span>

@@ -47,23 +47,23 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I&apos;m a Mobile Engineer and Full-Stack Developer specializing in
-        building production-ready mobile applications using React Native and
-        modern JavaScript technologies.
+        I&apos;m a Frontend and Mobile Engineer with a strong command of
+        React.js and React Native — building polished web interfaces and
+        production mobile applications across the full JavaScript stack.
         <br />
         <br />
-        I have successfully shipped multiple mobile applications to the Apple
-        App Store and developed scalable platforms used for workforce
-        management, productivity tracking, and operational analytics.
+        On the frontend, I craft responsive, high-performance web apps with
+        React, TypeScript, and modern UI patterns. On mobile, I have
+        shipped multiple applications to the Apple App Store and Google
+        Play Store using React Native.
         <br />
         <br />
-        My experience spans mobile development, backend systems, and
-        cloud-connected applications. I focus on building reliable,
-        high-performance software that helps organizations streamline operations
-        and make better data-driven decisions.
+        My experience spans component architecture, state management,
+        API integration, and mobile-to-web design systems. I focus on
+        writing clean, maintainable code that scales with the product.
         <br />
-        <br />I enjoy solving complex problems, designing clean architectures,
-        and building products that deliver real business value.
+        <br />I enjoy solving real problems through great interfaces —
+        whether that screen is a browser or a phone.
       </motion.p>
 
       <div className="mt-20 flex flex-wrap gap-10">
