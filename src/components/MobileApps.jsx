@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -281,6 +282,22 @@ const AppModal = ({ app, onClose }) => {
   const dragStartScrollLeftRef = useRef(0);
   const didDragRef = useRef(false);
 
+  // Lock background scroll while the modal is open and close on Escape.
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = originalOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [onClose]);
+
   const handleRailPointerDown = (e) => {
     const rail = screenshotsRailRef.current;
     if (!rail) return;
@@ -316,7 +333,7 @@ const AppModal = ({ app, onClose }) => {
     }
   };
 
-  return (
+  return createPortal(
     <div
       className="fixed inset-0 z-[1200] flex items-center justify-center p-4"
       onClick={onClose}
@@ -693,7 +710,8 @@ const AppModal = ({ app, onClose }) => {
           </div>
         )}
       </motion.div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
