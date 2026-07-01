@@ -145,16 +145,18 @@ const experiences = [
     ],
   },
   {
-    title: "FrontEnd Engineer Lead",
+    title: "Full-Stack Engineer (React & Java)",
     company_name: "Groomlog",
     icon: groomlog,
     iconBg: "#383E56",
     date: "March 2020 - April 2021",
     points: [
+      "Full-Stack Delivery: Owned features end-to-end across a React frontend and Java / Spring Boot backend, shipping production-ready functionality from UI to database.",
+      "Backend Engineering: Designed and built RESTful APIs and microservices in Java and Spring Boot, integrating PostgreSQL and Redis caching for reliable, low-latency data access.",
       "UI/UX Design Transformation: Led a redesign resulting in a 40% user engagement boost and a 30% reduction in development cycles.",
       "Technical Expertise: Implemented React-based architecture and Progressive Web App integration, enhancing performance and user satisfaction.",
       "Collaboration and Communication: Established transparent channels, fostering knowledge sharing and timely project delivery.",
-      "Quality Assurance: Implemented rigorous code reviews, ensuring high-performance frontend solutions.",
+      "Quality Assurance: Implemented rigorous code reviews across frontend and backend, ensuring high-performance, maintainable solutions.",
     ],
   },
   {
@@ -264,7 +266,7 @@ const projects = [
     ],
     image: watchcord,
     source_code_link: "https://github.com/EssienAbasiama/discord-sentinel",
-    live_site_link: "https://analyzed-winners-individually-perhaps.trycloudflare.com",
+    live_site_link: "https://watchcord.fly.dev/",
   },
   {
     name: "GrandX Studio",
