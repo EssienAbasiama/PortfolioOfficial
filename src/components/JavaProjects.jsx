@@ -58,6 +58,23 @@ const javaProjects = [
     source_code_link:
       "https://github.com/EssienAbasiama/EasyWay-Online-Banking-App",
   },
+  {
+    name: "NestlyPay — Data API",
+    description:
+      "The backend data API powering NestlyPay, a payments platform that connects businesses to simplify invoicing, track sales, and get paid faster with automated reminders and role-based access.",
+    highlights: [
+      "Built the data API behind invoice creation, delivery, and payment status tracking.",
+      "Powered automated payment reminders to help businesses secure cashflow and follow up on clients.",
+      "Supported role and user management so teams can manage transactions without sharing credentials.",
+      "Exposed RESTful endpoints for finance management, sales tracking, and business operations.",
+    ],
+    tags: [
+      { name: "REST API", color: "blue-text-gradient" },
+      { name: "Payments", color: "green-text-gradient" },
+      { name: "Fintech", color: "pink-text-gradient" },
+    ],
+    source_code_link: "https://github.com/groomlog/Nestlypay-data-api",
+  },
 ];
 
 const JavaProjectCard = ({ index, name, description, highlights, tags, source_code_link }) => {

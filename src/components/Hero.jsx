@@ -80,6 +80,12 @@ const Hero = () => {
               style={{ lineHeight: 1.1 }}
               className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
             >
+              Java · Spring Boot Engineer
+            </p>
+            <p
+              style={{ lineHeight: 1.1 }}
+              className="Typewriter__wrapper m-0 text-[#915EFF] text-[11px] xs:text-[12px] sm:text-[14px] lg:text-[18px] font-semibold uppercase tracking-[0.14em] sm:tracking-[0.22em]"
+            >
               React · React Native · Node.js
             </p>
           </div>
@@ -95,17 +101,19 @@ const Hero = () => {
               mobile applications with React Native.
             </p>
             <p className="text-[14px] sm:text-[16px] lg:text-[18px] leading-[24px] sm:leading-[28px] lg:leading-[30px] text-white/90">
-              From pixel-perfect frontend UIs to apps shipped on the App Store
-              and Play Store — I deliver software that performs and scales.
+              I also engineer robust backends in Java and Spring Boot —
+              microservices, RESTful APIs, and cloud services built to perform
+              and scale.
             </p>
           </div>
 
           <div className="mt-5 sm:mt-6 inline-flex flex-col gap-1 rounded-2xl border border-[#915EFF]/30 bg-[#915EFF]/10 px-4 py-3">
             <p className="text-[#915EFF] font-semibold text-[14px] sm:text-[15px] lg:text-[17px] tracking-wide">
-              Frontend & Mobile Engineer
+              Frontend · Mobile · Java Engineer
             </p>
             <p className="text-white font-medium text-[12px] sm:text-[13px] lg:text-[15px]">
-              Web apps · 2 apps shipped to the App Store and Play Store
+              Web apps · 2 apps shipped to the stores · Java & Spring Boot
+              backends
             </p>
           </div>
 
@@ -121,6 +129,12 @@ const Hero = () => {
             </span>
             <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
               Node.js
+            </span>
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              Java
+            </span>
+            <span className="rounded-full border border-[#915EFF]/40 bg-[#915EFF]/10 px-3 sm:px-4 py-1.5 sm:py-2 text-[11px] sm:text-[12px] lg:text-[14px] font-medium text-white">
+              Spring Boot
             </span>
           </div>
 
