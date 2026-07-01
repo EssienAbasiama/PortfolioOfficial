@@ -9,6 +9,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import MobileApps from "./MobileApps";
+import JavaProjects from "./JavaProjects";
 
 
 export {
@@ -25,5 +26,6 @@ export {
   BallCanvas,
   ComputersCanvas,
   StarsCanvas,
-  MobileApps
+  MobileApps,
+  JavaProjects
 };
