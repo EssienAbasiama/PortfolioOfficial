@@ -145,11 +145,11 @@ const experiences = [
     ],
   },
   {
-    title: "Full-Stack Engineer (React & Java)",
+    title: "Software Development Lead",
     company_name: "Groomlog",
     icon: groomlog,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2022 - March 2024",
     points: [
       "Full-Stack Delivery: Owned features end-to-end across a React frontend and Java / Spring Boot backend, shipping production-ready functionality from UI to database.",
       "Backend Engineering: Designed and built RESTful APIs and microservices in Java and Spring Boot, integrating PostgreSQL and Redis caching for reliable, low-latency data access.",
@@ -157,6 +157,18 @@ const experiences = [
       "Technical Expertise: Implemented React-based architecture and Progressive Web App integration, enhancing performance and user satisfaction.",
       "Collaboration and Communication: Established transparent channels, fostering knowledge sharing and timely project delivery.",
       "Quality Assurance: Implemented rigorous code reviews across frontend and backend, ensuring high-performance, maintainable solutions.",
+    ],
+  },
+  {
+    title: "Frontend Engineer",
+    company_name: "Nestlypay",
+    icon: nestlypay,
+    iconBg: "#383E56",
+    date: "Dec 2021 - April 2022",
+    points: [
+      "Successfully reduced page load times by 50% through meticulous frontend asset optimization and implementation of performance best practices. This improvement significantly enhanced user experience, positively impacting search engine rankings and overall site responsiveness.",
+      "Led a project to achieve flawless cross-browser compatibility for a complex web application, ensuring consistent and seamless user experience across major browsers. This effort resolved user-reported issues, enhancing accessibility and broadening user reach.",
+
     ],
   },
   {
@@ -170,18 +182,6 @@ const experiences = [
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Nestlypay",
-    icon: nestlypay,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Successfully reduced page load times by 50% through meticulous frontend asset optimization and implementation of performance best practices. This improvement significantly enhanced user experience, positively impacting search engine rankings and overall site responsiveness.",
-      "Led a project to achieve flawless cross-browser compatibility for a complex web application, ensuring consistent and seamless user experience across major browsers. This effort resolved user-reported issues, enhancing accessibility and broadening user reach.",
-
     ],
   },
   {
