@@ -13,6 +13,12 @@ import hrScreenshot5 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 
 import hrScreenshot6 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 5.jpeg";
 import hrScreenshot7 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 6.jpeg";
 import hrScreenshot8 from "../assets/HR_screenshot/WhatsApp Image 2026-03-14 at 7.jpeg";
+import staybookToday from "../assets/staybook/01-today.jpg";
+import staybookCalendar from "../assets/staybook/02-calendar.jpg";
+import staybookBooking from "../assets/staybook/03-booking.jpg";
+import staybookConversation from "../assets/staybook/04-conversation.jpg";
+import staybookInsights from "../assets/staybook/05-insights.jpg";
+import staybookInbox from "../assets/staybook/06-inbox.jpg";
 
 const mobileApps = [
   {
@@ -191,6 +197,67 @@ const mobileApps = [
       "Mobile productivity tools",
     ],
     tech: ["React Native", "API integrations", "Mobile-first architecture"],
+  },
+  {
+    name: "Staybook",
+    subtitle: "Vacation Rental Management",
+    context: "Personal project · iOS, Android & web",
+    badge: "Built with Expo & React Native",
+    image: staybookToday,
+    video: "/videos/staybook-demo.mp4",
+    // Add the repo link once it's public; the button shows only when set.
+    githubLink: "",
+    description:
+      "Staybook is a management app for vacation-rental hosts. It puts every home's bookings on one calendar, lists today's check-ins, check-outs and cleaning, keeps guest messages in one inbox and tracks occupancy and revenue. I designed and built it end to end as one React Native codebase that runs on iOS, Android and the web.",
+    features: [
+      "Multi-property booking calendar: one row per home and one column per night, with each stay drawn as a bar colored by booking channel (Airbnb, Booking.com or direct).",
+      "Block dates by tapping two free nights; tap a block to remove it.",
+      "Today view: guests in house, arrivals, departures and a cleaning checklist.",
+      "Guest inbox with saved replies; on tablets and desktop the list and conversation sit side by side.",
+      "Insights: occupancy, booked revenue, average nightly rate, revenue by month and the share of nights from each channel.",
+      "Booking details with a payout breakdown, including cleaning and channel fees.",
+    ],
+    tech: ["Expo", "React Native", "TypeScript", "Expo Router", "Reanimated"],
+    techGroups: [
+      {
+        title: "Mobile Development",
+        items: [
+          "Expo SDK 58 and Expo Router",
+          "React Native 0.88",
+          "TypeScript in strict mode",
+        ],
+      },
+      {
+        title: "UI & Motion",
+        items: [
+          "The platform's native tab bar on iOS and Android",
+          "React Native Reanimated animations",
+          "Design tokens for color, type and spacing",
+        ],
+      },
+      {
+        title: "State & Logic",
+        items: [
+          "React context and reducer",
+          "Pure functions for occupancy, revenue and availability",
+        ],
+      },
+      {
+        title: "Platforms",
+        items: [
+          "iOS and Android",
+          "Web, with a sidebar layout on desktop",
+        ],
+      },
+    ],
+    screenshots: [
+      staybookToday,
+      staybookCalendar,
+      staybookBooking,
+      staybookConversation,
+      staybookInbox,
+      staybookInsights,
+    ],
   },
 ];
 
@@ -838,7 +905,7 @@ const MobileApps = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText}`}>
-          Production Apps I've Shipped
+          Apps I've Built
         </p>
         <h2 className={`${styles.sectionHeadText}`}>Mobile Apps.</h2>
       </motion.div>
@@ -847,8 +914,9 @@ const MobileApps = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        Production mobile applications live on the Apple App Store and Google
-        Play Store — built with React Native and used by real organizations.
+        Two production apps live on the Apple App Store and Google Play Store,
+        used by real organizations, plus Staybook, a product I designed and
+        built end to end. All built with React Native.
       </motion.p>
 
       <div className="mt-16 flex flex-wrap justify-center gap-14 sm:gap-20">
