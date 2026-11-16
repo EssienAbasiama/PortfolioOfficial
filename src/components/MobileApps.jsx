@@ -22,7 +22,11 @@ const mobileApps = [
     appStoreLink: "https://apps.apple.com/ng/app/qclosehr/id6751410996",
     playStoreLink:
       "https://play.google.com/store/apps/details?id=com.qclosellc.QCloseHR&pcampaignid=web_share",
-    image: "/images/qclosehr-mobile.png",
+    image: hrScreenshot2,
+    // Demo video: a YouTube link (normal, unlisted or Shorts) or a file in
+    // /public, e.g. "/videos/qclosehr-demo.mp4". A file also plays silently
+    // on loop inside the phone frame on the card.
+    video: "",
     description:
       "QCloseHR is a cloud-based HR and workforce management platform designed for modern organizations. It enables businesses to manage employee attendance, productivity, HR operations, and workforce analytics through a mobile-first experience.",
     caseStudy: {
@@ -177,6 +181,7 @@ const mobileApps = [
     playStoreLink:
       "https://play.google.com/store/apps/details?id=com.qclosellc.QCloseSafety&pcampaignid=web_share",
     image: "/images/qclosesafety-mobile.png",
+    video: "",
     description:
       "QCloseSafety is a productivity and service management platform designed to improve operational efficiency by simplifying workflows and providing real-time workforce insights.",
     features: [
@@ -189,7 +194,34 @@ const mobileApps = [
   },
 ];
 
+// Turns an app's `video` value into something we can render: a YouTube embed
+// (watch, youtu.be, Shorts or embed links) or a plain video file.
+const getVideo = (app) => {
+  const url = app.video;
+  if (!url) return null;
+
+  const youtubeId = url.match(
+    /(?:youtube\.com\/(?:watch\?(?:.*&)?v=|shorts\/|embed\/)|youtu\.be\/)([\w-]{11})/
+  )?.[1];
+
+  if (youtubeId) {
+    return {
+      type: "youtube",
+      src: `https://www.youtube-nocookie.com/embed/${youtubeId}?rel=0&playsinline=1`,
+      // Phone screen recordings are portrait; set videoOrientation:
+      // "landscape" on an app whose video is widescreen.
+      portrait: app.videoOrientation !== "landscape",
+    };
+  }
+
+  return { type: "file", src: url };
+};
+
 const IPhoneMockup = ({ app, index, onClick }) => {
+  const [imageFailed, setImageFailed] = useState(!app.image);
+  const video = getVideo(app);
+  const loopVideoInFrame = video?.type === "file";
+
   return (
     <motion.div
       variants={fadeIn("up", "spring", index * 0.4, 0.75)}
@@ -214,26 +246,37 @@ const IPhoneMockup = ({ app, index, onClick }) => {
           >
             {/* Dynamic Island — floats over the image */}
             <div className="absolute top-[10px] left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-10 border border-[#2a2a2a]" />
-            {/* App screenshot */}
-            <img
-              src={app.image}
-              alt={`${app.name} screenshot`}
-              className="w-full h-full object-cover"
-              onError={(e) => {
-                e.currentTarget.style.display = "none";
-              }}
-            />
-
-            {/* Placeholder shown when image missing */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#1a0533] via-[#0d001f] to-[#050816] pointer-events-none">
-              <div className="text-[48px] mb-3">📱</div>
-              <p className="text-white text-[13px] font-bold text-center px-4">
-                {app.name}
-              </p>
-              <p className="text-[#915EFF] text-[11px] mt-1 text-center px-4">
-                {app.subtitle}
-              </p>
-            </div>
+            {/* Demo video on loop, else the screenshot, else a placeholder */}
+            {loopVideoInFrame ? (
+              <video
+                src={video.src}
+                poster={imageFailed ? undefined : app.image}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                aria-label={`${app.name} demo`}
+                className="w-full h-full object-cover"
+              />
+            ) : !imageFailed ? (
+              <img
+                src={app.image}
+                alt={`${app.name} screenshot`}
+                className="w-full h-full object-cover"
+                onError={() => setImageFailed(true)}
+              />
+            ) : (
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-b from-[#1a0533] via-[#0d001f] to-[#050816] pointer-events-none">
+                <div className="text-[48px] mb-3">📱</div>
+                <p className="text-white text-[13px] font-bold text-center px-4">
+                  {app.name}
+                </p>
+                <p className="text-[#915EFF] text-[11px] mt-1 text-center px-4">
+                  {app.subtitle}
+                </p>
+              </div>
+            )}
 
             {/* Hover overlay */}
             {/* Home indicator — floats over the image at the bottom */}
@@ -258,11 +301,19 @@ const IPhoneMockup = ({ app, index, onClick }) => {
       {/* Labels below mockup */}
       <div className="mt-5 flex flex-col items-center gap-2 max-w-[300px]">
         <span className="text-[11px] font-semibold bg-[#915EFF]/15 text-[#915EFF] border border-[#915EFF]/40 px-3 py-[3px] rounded-full uppercase tracking-wider">
-          Built with React Native
+          {app.badge ?? "Built with React Native"}
         </span>
         <p className="text-white font-bold text-[18px] text-center">
           {app.name}
         </p>
+        {video && (
+          <span className="flex items-center gap-1.5 text-white text-[12px] font-semibold">
+            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-[#915EFF] text-[9px] pl-[2px]">
+              ▶
+            </span>
+            Watch the demo
+          </span>
+        )}
         <p className="text-[#915EFF] text-[12px] font-medium text-center">
           {app.context}
         </p>
@@ -276,6 +327,7 @@ const AppModal = ({ app, onClose }) => {
   if (!app) return null;
 
   const caseStudy = app.caseStudy;
+  const video = getVideo(app);
   const [activeScreenshot, setActiveScreenshot] = useState(null);
   const screenshotsRailRef = useRef(null);
   const dragStartXRef = useRef(0);
@@ -362,13 +414,51 @@ const AppModal = ({ app, onClose }) => {
         {/* Header */}
         <div className="flex flex-col gap-2 mb-6 pr-8">
           <span className="text-[11px] font-semibold bg-[#915EFF]/15 text-[#915EFF] border border-[#915EFF]/40 px-3 py-[3px] rounded-full uppercase tracking-wider w-fit">
-            Built with React Native
+            {app.badge ?? "Built with React Native"}
           </span>
           <h2 className="text-white font-black text-[28px] sm:text-[34px] leading-tight">
             {app.name}
           </h2>
           <p className="text-secondary text-[14px]">{app.subtitle}</p>
         </div>
+
+        {/* Demo video — first thing in the modal */}
+        {video && (
+          <div className="mb-6">
+            <h3 className="font-semibold text-[15px] mb-3 uppercase tracking-wide text-[#915EFF]">
+              Demo Video
+            </h3>
+            {video.type === "youtube" ? (
+              <div
+                className="relative mx-auto overflow-hidden rounded-xl border border-[#915EFF]/20 bg-black"
+                style={
+                  video.portrait
+                    ? { aspectRatio: "9 / 16", width: "min(100%, calc(70vh * 9 / 16))" }
+                    : { aspectRatio: "16 / 9", width: "100%" }
+                }
+              >
+                <iframe
+                  src={video.src}
+                  title={`${app.name} demo video`}
+                  className="absolute inset-0 w-full h-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  loading="lazy"
+                />
+              </div>
+            ) : (
+              <video
+                src={video.src}
+                poster={app.image}
+                controls
+                playsInline
+                preload="metadata"
+                className="mx-auto block w-auto max-w-full max-h-[70vh] rounded-xl border border-[#915EFF]/20 bg-black"
+              />
+            )}
+          </div>
+        )}
 
         {/* About */}
         <div className="mb-6">
@@ -646,8 +736,31 @@ const AppModal = ({ app, onClose }) => {
           )}
         </div>
 
-        {/* Store CTAs */}
+        {/* Store / project CTAs — each shows only when its link is set */}
         <div className="grid grid-cols-1 gap-3">
+          {app.liveLink && (
+            <a
+              href={app.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-[#915EFF] hover:bg-[#7d4fe0] active:bg-[#6b40cc] transition-colors text-white font-semibold rounded-xl py-3 px-6 w-full"
+            >
+              Try the live demo
+            </a>
+          )}
+
+          {app.githubLink && (
+            <a
+              href={app.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-3 bg-[#1d1836] hover:bg-[#2a2248] active:bg-[#141126] border border-[#915EFF]/40 transition-colors text-white font-semibold rounded-xl py-3 px-6 w-full"
+            >
+              View source on GitHub
+            </a>
+          )}
+
+          {app.appStoreLink && (
           <a
             href={app.appStoreLink}
             target="_blank"
@@ -666,7 +779,9 @@ const AppModal = ({ app, onClose }) => {
             </svg>
             View on App Store
           </a>
+          )}
 
+          {app.playStoreLink && (
           <a
             href={app.playStoreLink}
             target="_blank"
@@ -685,6 +800,7 @@ const AppModal = ({ app, onClose }) => {
             </svg>
             View on Play Store
           </a>
+          )}
         </div>
 
         {activeScreenshot && (
