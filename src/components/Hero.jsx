@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import EssienResume from "./../assets/Essien_Abasiama_Senior_Mobile_Engineer_Resume.pdf";
+import EssienResume from "./../assets/Essien_Abasiama_Full_Stack_Engineer_CV.pdf";
 
 const Hero = () => {
   useEffect(() => {
@@ -145,7 +145,7 @@ const Hero = () => {
             >
               <a
                 href={EssienResume}
-                download="Essien_Abasiama_Senior_Mobile_Engineer_Resume"
+                download="Essien_Abasiama_Full_Stack_Engineer_CV.pdf"
                 className=""
               >
                 Resume
