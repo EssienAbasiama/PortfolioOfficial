@@ -11,7 +11,7 @@ import {
   Works,
   StarsCanvas,
   MobileApps,
-  JavaProjects,
+  // JavaProjects,
 } from "./components";
 import Footer from "./components/Footer";
 
@@ -27,7 +27,7 @@ const App = () => {
         <Experience />
         <Tech />
         <MobileApps />
-        <JavaProjects />
+        {/* <JavaProjects /> */}
         <Works />
         <Feedbacks />
         <div className="relative z-0">
