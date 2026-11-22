@@ -35,6 +35,7 @@ import {
   movieBox,
   watchcord,
   grandx,
+  adun,
 
 } from "../assets";
 
@@ -245,6 +246,28 @@ const projects = [
     image: wibe,
     source_code_link: "https://github.com/EssienAbasiama/wibe-studio-house",
     live_site_link: "https://wibe-studio-umber.vercel.app/"
+  },
+  {
+    name: "Àdùn",
+    description:
+      "A concept Lagos restaurant where party jollof, egusi and suya share a revolving lazy-Susan with tonkotsu and carbonara. Rising steam, self-drawing callouts, a sushi & small-chops belt, a live dish builder, rider tracking and a wax-sealed reservation, every plate drawn in code.",
+    tags: [
+      {
+        name: "Next.js 16",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "GSAP",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Creative Development",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: adun,
+    source_code_link: "https://github.com/EssienAbasiama/restaurant",
+    live_site_link: "https://adun-rose.vercel.app/",
   },
   {
     name: "WatchCord",
